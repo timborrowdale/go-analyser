@@ -1,0 +1,67 @@
+13:45:10.840 [go] Job Started: 2016-06-30 13:45:10 UTC
+
+13:45:10.840 [go] Start to prepare Zuto.Uk.Application/1.0.234.0/Build/1/AnalyseAndUnitTest on ci-agent-001 [C:\Program Files (x86)\Go Agent]
+13:45:11.122 [go] Cleaning working directory "C:\Program Files (x86)\Go Agent\pipelines\Zuto.Uk.Application" since stage is configured to clean working directory
+13:45:11.122 [go] Start to update materials.
+
+13:45:11.122 [go] Start updating files at revision e022e81402da97143e3a273d139915ada4ae1819 from #.git
+13:45:11.185 STDERR: Cloning into 'C:\Program Files (x86)\Go Agent\pipelines\Zuto.Uk.Application'...
+13:45:20.378 [GIT] Fetching changes
+13:45:21.421 [GIT] Performing git gc
+13:45:21.593 [GIT] Reset working directory pipelines\Zuto.Uk.Application
+13:45:21.593 [GIT] Cleaning all unversioned files in working copy
+13:45:21.687 [GIT] Cleaning submodule configurations in .git/config
+13:45:21.723 [GIT] Updating working copy to revision e022e81402da97143e3a273d139915ada4ae1819
+13:45:25.747 HEAD is now at e022e81 Merge branch 'master' of https://github.com/carloan4u/Zuto.Uk.Application
+13:45:25.763 [GIT] Removing modified files in submodules
+13:45:26.434 [GIT] Cleaning all unversioned files in working copy
+13:45:26.700 [go] Done.
+
+13:45:26.700 [go] setting environment variable 'GO_ENVIRONMENT_NAME' to value 'ACCOUNTAREA'
+13:45:26.700 [go] setting environment variable 'DatabasePasswordLive' to value '********'
+
+13:45:26.763 [go] Start to build Zuto.Uk.Application/1.0.234.0/Build/1/AnalyseAndUnitTest on ci-agent-001 [C:\Program Files (x86)\Go Agent]
+13:45:26.763 [go] Current job status: passed.
+
+13:45:26.763 [go] Start to execute task: <exec command="nuget" >
+<arg>restore</arg>
+<arg>Zuto.UK.Application.sln</arg>
+<arg>-source</arg>
+<arg>%NUGET%</arg>
+</exec>.
+13:45:27.435 Installing 'Autofac.WebApi2 3.4.0'.
+13:45:33.695 Successfully installed 'Zuto.Horizon.Shared 1.0.85.0'.
+13:45:33.991 [go] Current job status: passed.
+
+13:45:33.991 [go] Start to execute task: <exec command="nuget" >
+<arg>install</arg>
+<arg>Zuto.Sonar.Net</arg>
+<arg>-o</arg>
+<arg>packages</arg>
+<arg>-source</arg>
+<arg>%NEXUS%</arg>
+</exec>.
+13:45:35.180 Installing 'Zuto.Sonar.Net 1.0.25.0'.
+13:45:35.195 Successfully installed 'Zuto.Sonar.Net 1.0.25.0'.
+13:45:35.210 [go] Current job status: passed.
+
+13:45:35.210 [go] Start to execute task: <exec command="cmd" >
+<arg>/c</arg>
+<arg>powershell copy .\packages\Zuto.Sonar.Net*\content\* . -recurse</arg>
+</exec>.
+13:45:36.244 [go] Current job status: passed.
+
+13:45:36.244 [go] Start to execute task: <exec command="cmd" >
+<arg>/c</arg>
+<arg>powershell -File ExecuteAnalysisWithCoverage.ps1 -SolutionName %GO_PIPELINE_NAME% -Version %GO_PIPELINE_LABEL% -MaximumErrorsAllowed 3 -SonarWaitTime 30 -AdditionalFilters "I:[Zuto.*]*"</arg>
+</exec>.
+13:45:37.029 Running Sonar
+13:48:32.484 Error count: 0
+13:48:32.576 [go] Current job status: passed.
+
+13:48:32.607 [go] Start to create properties Zuto.Uk.Application/1.0.234.0/Build/1/AnalyseAndUnitTest on ci-agent-001 [C:\Program Files (x86)\Go Agent]
+13:48:32.607 [go] Start to upload Zuto.Uk.Application/1.0.234.0/Build/1/AnalyseAndUnitTest on ci-agent-001 [C:\Program Files (x86)\Go Agent]
+13:48:32.607 [go] Uploading artifacts from C:\Program Files (x86)\Go Agent\pipelines\Zuto.Uk.Application\UnitTestResults.nunit.xml to [defaultRoot]
+13:48:32.904 [go] Uploading artifacts from C:\Users\ZUTO~1.ADM\AppData\Local\Temp\2\cruise-fb0b96e8-b010-4e1c-b973-ed76e0c2aa1f\3419fe1a-3ab1-414c-b82e-2f2331d41e29\result\index.html to testoutput
+13:48:32.953 [go] Uploading artifacts from C:\Users\ZUTO~1.ADM\AppData\Local\Temp\2\cruise-fb0b96e8-b010-4e1c-b973-ed76e0c2aa1f\3419fe1a-3ab1-414c-b82e-2f2331d41e29\result to testoutput
+13:48:33.646 [go] Job completed Zuto.Uk.Application/1.0.234.0/Build/1/AnalyseAndUnitTest on ci-agent-001 [C:\Program Files (x86)\Go Agent]
