@@ -1,0 +1,14 @@
+{
+  "request": {
+    "url": "/go/api/stages/Zuto.Uk.Application/Build/instance/234/1", 
+    "method": "GET"
+  }, 
+  "response": {
+    "status": 200, 
+    "headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "file": "mocks/data/stage_history.json"
+  }
+}

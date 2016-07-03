@@ -1,0 +1,14 @@
+{
+  "request": {
+    "url": "/go/api/pipelines/Zuto.Uk.Application/history", 
+    "method": "GET"
+  }, 
+  "response": {
+    "status": 200, 
+    "headers": {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "file": "mocks/data/pipeline_history.json"
+  }
+}

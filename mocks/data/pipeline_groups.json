@@ -1,0 +1,47 @@
+[
+  {
+    "name": "SalesOps",
+    "pipelines": [
+      {
+        "label": "1.0.${COUNT}.0",
+        "materials": [
+          {
+            "fingerprint": "acd7803c4083a5cca956e060d09f1eddd01f213010543e76dd123875cb2fba04",
+            "type": "Git",
+            "description": "URL: https://ci-clu4:******@github.com/carloan4u/ApplicationService.git, Branch: master"
+          }
+        ],
+        "stages": [
+          {
+            "name": "Build"
+          },
+          {
+            "name": "Deployment_QA"
+          },
+          {
+            "name": "UpdateDNS_QA"
+          },
+          {
+            "name": "CleanUp_QA"
+          },
+          {
+            "name": "Passed_QA"
+          },
+          {
+            "name": "Deployment_Live"
+          },
+          {
+            "name": "UpdateDNS_Live"
+          },
+          {
+            "name": "ReloadVarnish_Live"
+          },
+          {
+            "name": "CleanUp_Live"
+          }
+        ],
+        "name": "Zuto.Uk.Application"
+      }
+    ]
+  }
+]

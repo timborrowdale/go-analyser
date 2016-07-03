@@ -1,0 +1,14 @@
+{
+  "request": {
+    "url": "/go/files/Zuto.Uk.Application/234/Build/1/AnalyseAndUnitTest/cruise-output/console.log", 
+    "method": "GET"
+  }, 
+  "response": {
+    "status": 200, 
+    "headers": {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "file": "mocks/data/console_output.log"
+  }
+}

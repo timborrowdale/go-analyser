@@ -1,0 +1,154 @@
+{
+  "result": "Passed",
+  "jobs": [
+    {
+      "result": "Passed",
+      "agent_uuid": "67268325-c699-4a9a-beb2-1acf4f94d891",
+      "stage_name": null,
+      "scheduled_date": 1467294069089,
+      "job_state_transitions": [
+        {
+          "state": "Scheduled",
+          "state_change_time": 1467294069089,
+          "id": 366904
+        },
+        {
+          "state": "Assigned",
+          "state_change_time": 1467294209495,
+          "id": 366932
+        },
+        {
+          "state": "Preparing",
+          "state_change_time": 1467294219539,
+          "id": 366933
+        },
+        {
+          "state": "Building",
+          "state_change_time": 1467294235431,
+          "id": 366937
+        },
+        {
+          "state": "Completing",
+          "state_change_time": 1467294421216,
+          "id": 366942
+        },
+        {
+          "state": "Completed",
+          "state_change_time": 1467294421701,
+          "id": 366943
+        }
+      ],
+      "pipeline_counter": null,
+      "state": "Completed",
+      "original_job_id": null,
+      "pipeline_name": null,
+      "name": "AnalyseAndUnitTest",
+      "stage_counter": null,
+      "rerun": false,
+      "id": 62255
+    },
+    {
+      "result": "Passed",
+      "agent_uuid": "99d98704-126d-403d-b414-f259d67ac19b",
+      "stage_name": null,
+      "scheduled_date": 1467294069089,
+      "job_state_transitions": [
+        {
+          "state": "Scheduled",
+          "state_change_time": 1467294069089,
+          "id": 366902
+        },
+        {
+          "state": "Assigned",
+          "state_change_time": 1467294076641,
+          "id": 366906
+        },
+        {
+          "state": "Preparing",
+          "state_change_time": 1467294086741,
+          "id": 366909
+        },
+        {
+          "state": "Building",
+          "state_change_time": 1467294134261,
+          "id": 366920
+        },
+        {
+          "state": "Completing",
+          "state_change_time": 1467294290134,
+          "id": 366940
+        },
+        {
+          "state": "Completed",
+          "state_change_time": 1467294365949,
+          "id": 366941
+        }
+      ],
+      "pipeline_counter": null,
+      "state": "Completed",
+      "original_job_id": null,
+      "pipeline_name": null,
+      "name": "MSBuild",
+      "stage_counter": null,
+      "rerun": false,
+      "id": 62253
+    },
+    {
+      "result": "Passed",
+      "agent_uuid": "cbed2c39-b093-4eb4-94c0-993a9ec8965c",
+      "stage_name": null,
+      "scheduled_date": 1467294069089,
+      "job_state_transitions": [
+        {
+          "state": "Scheduled",
+          "state_change_time": 1467294069089,
+          "id": 366903
+        },
+        {
+          "state": "Assigned",
+          "state_change_time": 1467294076733,
+          "id": 366907
+        },
+        {
+          "state": "Preparing",
+          "state_change_time": 1467294086793,
+          "id": 366910
+        },
+        {
+          "state": "Building",
+          "state_change_time": 1467294131838,
+          "id": 366919
+        },
+        {
+          "state": "Completing",
+          "state_change_time": 1467294253339,
+          "id": 366938
+        },
+        {
+          "state": "Completed",
+          "state_change_time": 1467294256445,
+          "id": 366939
+        }
+      ],
+      "pipeline_counter": null,
+      "state": "Completed",
+      "original_job_id": null,
+      "pipeline_name": null,
+      "name": "Test",
+      "stage_counter": null,
+      "rerun": false,
+      "id": 62254
+    }
+  ],
+  "rerun_of_counter": null,
+  "approved_by": "changes",
+  "pipeline_counter": 234,
+  "pipeline_name": "Zuto.Uk.Application",
+  "name": "Build",
+  "approval_type": "success",
+  "artifacts_deleted": false,
+  "id": 52404,
+  "counter": 1,
+  "fetch_materials": true,
+  "clean_working_directory": true
+}
