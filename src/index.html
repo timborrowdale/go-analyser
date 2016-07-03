@@ -4,27 +4,10 @@
 		<script src="js/angular-scripts.js"></script>
 		<script src="js/app-scripts.js"></script>
 	</head>
-	<body>		
+	<body>
 		<div ng-controller="MainController as main">
 			<ul>
-				<li ng-repeat="pipeline_group in main.pipeline_groups">
-					<div>
-						<label>{{pipeline_group.name}}</label>
-						<ul>
-							<li 
-								ng-repeat="pipeline in pipeline_group.pipelines"
-								ng-controller="PipelineController as pipelineController"
-							>
-								<label>{{pipeline.name}}</label>
-								<ul>
-									<li ng-repeat="history in pipelineController.pipeline_history">
-										<label>{{history.pipelines[0].counter}}</label>
-									</li> 
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</li>
+				<pipeline-group ng-repeat="pipeline_group in main.pipeline_groups" pipeline-group="pipeline_group"></pipeline-group>
 			</ul>
 		</div>
 	</body>

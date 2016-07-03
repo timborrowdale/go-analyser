@@ -1,0 +1,8 @@
+<li ng-controller="PipelineController as pipelineController">
+  <label>{{pipeline.name}}</label>
+  <ul>
+    <li ng-repeat="history in pipelineController.pipeline_history.pipelines">
+      <pipeline-history history="history"></pipeline-history>
+    </li>
+  </ul>
+</li>

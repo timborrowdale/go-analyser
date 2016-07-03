@@ -1,0 +1,11 @@
+<li>
+  <div>
+    <label>{{pipelineGroup.name}}</label>
+    <ul>
+      <pipeline
+        ng-repeat="pipeline in pipelineGroup.pipelines"
+        pipeline="pipeline">
+      </pipeline>
+    </ul>
+  </div>
+</li>
