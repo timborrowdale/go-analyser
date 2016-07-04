@@ -8,7 +8,15 @@
     "url": "https://github.com/timborrowdale/go-analyser"
   },
   "dependencies": {
-    "gulp": "^3.9.1"
+    "angular": "^1.5.7",
+    "angular-base64": "^2.0.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-stubby-server": "^0.2.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.2"
   },
   "devDependencies": {},
   "scripts": {
