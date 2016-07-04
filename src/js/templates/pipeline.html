@@ -1,8 +1,11 @@
-<li ng-controller="PipelineController as pipelineController">
-  <label>{{pipeline.name}}</label>
+<li>
+  <label ng-click="pipelineController.toggle()">P: {{pipeline.name}}</label>
   <ul>
-    <li ng-repeat="history in pipelineController.pipeline_history.pipelines">
-      <pipeline-history history="history"></pipeline-history>
-    </li>
+      <pipeline-history
+        ng-if="!pipelineController.expanded"
+        ng-repeat="history in pipelineController.pipeline_history.pipelines"
+        history="history"
+        pipeline="pipeline">
+      </pipeline-history>
   </ul>
 </li>

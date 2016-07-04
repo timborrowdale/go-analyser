@@ -1,16 +1,16 @@
 angular.module('goAnalyser')
 	.factory("pipeline_history", pipelineHistory);
-	
-pipelineHistory.$inject = ['$http'];
-	
-function pipelineHistory($http) {
-	
+
+pipelineHistory.$inject = ['$http', 'goApi'];
+
+function pipelineHistory($http, goApi) {
+
 	return {
 		get: get
 	};
-	
+
 	function get(pipeline_name) {
-		return $http.get("http://localhost:8882/go/api/pipelines/" + pipeline_name + "/history")
+		return $http.get(goApi.url + "pipelines/" + pipeline_name + "/history")
 			.then(function(result) {
 				return result.data;
 			}

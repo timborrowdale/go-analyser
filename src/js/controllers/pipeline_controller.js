@@ -7,10 +7,15 @@ angular.module('goAnalyser')
 
     var vm = this;
 
-    pipelineHistory.get("Zuto.Uk.Application")
+    vm.expanded = true;
+
+    vm.toggle = function() {
+      vm.expanded = !vm.expanded;
+    }
+
+    pipelineHistory.get(this.pipeline.name)
       .then(function(pipeline_history) {
         vm.pipeline_history = pipeline_history;
-        console.log(vm.pipeline_history);
       });
 
   }

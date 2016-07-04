@@ -1,11 +1,10 @@
-<li>
-  <div>
-    <label>{{pipelineGroup.name}}</label>
-    <ul>
-      <pipeline
-        ng-repeat="pipeline in pipelineGroup.pipelines"
-        pipeline="pipeline">
-      </pipeline>
-    </ul>
-  </div>
-</li>
+<div>
+  <label ng-click="controller.toggle()">PG: {{controller.pipelineGroup.name}}</label>
+  <ul>
+    <pipeline
+      ng-if="!controller.expanded"
+      ng-repeat="pipeline in controller.pipelineGroup.pipelines"
+      pipeline="pipeline">
+    </pipeline>
+  </ul>
+</div>

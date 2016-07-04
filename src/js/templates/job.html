@@ -1,0 +1,13 @@
+<li>
+  <label ng-click="controller.toggle()">J: {{job.name}}</label>
+  <ul>
+    <job-state-transition
+      ng-if="!controller.expanded"
+      ng-repeat="jobStateTransition in controller.job.job_state_transitions"
+      job-state-transition="jobStateTransition">
+    </job-state-transition>
+  </ul>
+  <p>Job took {{
+    (controller.job.job_state_transitions[job.job_state_transitions.length -1].state_change_time -
+    controller.job.job_state_transitions[0].state_change_time) / 1000 | number : 2}} seconds</p>
+</li>

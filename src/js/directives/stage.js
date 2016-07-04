@@ -1,14 +1,15 @@
 angular.module('goAnalyser')
-  .directive('pipelineHistory', function() {
+  .directive('stage', function() {
     return {
       restrict: 'E',
       scope: false,
-      controller: 'ExpandController',
-      controllerAs: 'controller',
+      controller: 'StageController',
+      controllerAs: 'stageController',
       bindToController: {
+        stage: '=',
         history: '=',
         pipeline: '='
       },
-      templateUrl: 'templates/pipeline_history.html'
+      templateUrl: 'templates/stage.html'
     };
   });

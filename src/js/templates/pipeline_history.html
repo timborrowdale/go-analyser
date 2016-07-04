@@ -1,1 +1,12 @@
-<label>{{history.counter}}</label>
+<li>
+  <label ng-click="controller.toggle()">H: {{history.counter}}</label>
+  <ul>
+    <stage
+      ng-if="!controller.expanded"
+      ng-repeat="stage in history.stages"
+      stage="stage"
+      history="history"
+      pipeline="pipeline">
+    </stage>
+  </ul>
+</li>

@@ -1,0 +1,8 @@
+<li>
+  <label ng-click="stageController.toggle()">S: {{stage.name}}</label>
+  <job
+    ng-if="!stageController.expanded"
+    ng-repeat="job in stageController.stage_history.jobs"
+    job="job">
+  </job>
+</li>

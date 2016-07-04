@@ -1,3 +1,2 @@
 angular
-  .module('goAnalyser', [
-  ]);
+  .module('goAnalyser', ['base64']);

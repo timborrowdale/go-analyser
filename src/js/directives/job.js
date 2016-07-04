@@ -1,13 +1,13 @@
 angular.module('goAnalyser')
-  .directive('pipelineGroup', function() {
+  .directive('job', function() {
     return {
       restrict: 'E',
       scope: false,
       controller: 'ExpandController',
       controllerAs: 'controller',
       bindToController: {
-        pipelineGroup: '='
+        job: '='
       },
-      templateUrl: 'templates/pipeline_group.html'
+      templateUrl: 'templates/job.html'
     };
   });
