@@ -9,8 +9,8 @@ function pipelineGroups($http, goApi) {
 		get: get
 	};
 
-	function get() {		
-		return $http.get(goApi.url + "config/pipeline_groups").then(function(result) {
+	function get() {
+		return $http.get(goApi.url + "go/api/config/pipeline_groups").then(function(result) {
 			return result.data;
 		});
 	}

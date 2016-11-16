@@ -10,7 +10,7 @@ function pipelineHistory($http, goApi) {
 	};
 
 	function get(pipeline_name) {
-		return $http.get(goApi.url + "pipelines/" + pipeline_name + "/history")
+		return $http.get(goApi.url + "go/api/pipelines/" + pipeline_name + "/history")
 			.then(function(result) {
 				return result.data;
 			}

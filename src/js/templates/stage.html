@@ -3,6 +3,9 @@
   <job
     ng-if="!stageController.expanded"
     ng-repeat="job in stageController.stage_history.jobs"
-    job="job">
+    job="job"
+    stage="stage"
+    history="history"
+    pipeline="pipeline">
   </job>
 </li>

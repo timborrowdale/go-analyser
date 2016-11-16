@@ -3,10 +3,13 @@ angular.module('goAnalyser')
     return {
       restrict: 'E',
       scope: false,
-      controller: 'ExpandController',
+      controller: 'JobController',
       controllerAs: 'controller',
       bindToController: {
-        job: '='
+        job: '=',
+        stage: '=',
+        history: '=',
+        pipeline: '='
       },
       templateUrl: 'templates/job.html'
     };

@@ -11,7 +11,7 @@ function stageHistory($http, $q, goApi) {
 
 	function get(pipeline_name, stage_name, pipeline_counter, stage_counter) {
 		return $http.get(
-        goApi.url + "stages/" + pipeline_name + "/" +
+        goApi.url + "go/api/stages/" + pipeline_name + "/" +
         stage_name + "/instance/" + pipeline_counter + "/" + stage_counter)
 			.then(function(result) {
 				return result.data;

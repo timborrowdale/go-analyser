@@ -10,4 +10,7 @@
   <p>Job took {{
     (controller.job.job_state_transitions[job.job_state_transitions.length -1].state_change_time -
     controller.job.job_state_transitions[0].state_change_time) / 1000 | number : 2}} seconds</p>
+    <p>
+      Job Log: {{controller.jobLog}}
+    </p>
 </li>
